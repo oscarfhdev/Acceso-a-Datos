@@ -26,10 +26,9 @@ public class Ejercicio5 {
             String linea;
             while ((linea = br.readLine()) != null){
                 String lineaSeparada[] = linea.split(";");
-
-                Producto productoActualizado = new Producto(Integer.parseInt(lineaSeparada[0]), lineaSeparada[1], Double.parseDouble(lineaSeparada[2]));
-                double precioActualizado = productoActualizado.getPrecio() + (productoActualizado.getPrecio() * aumentoPrecio/100);
-                bw2.write(productoActualizado.getId() + ";" + productoActualizado.getNombre() + ";" + precioActualizado + "\n");
+                double precioActualizado = Double.parseDouble(lineaSeparada[2]) + (Double.parseDouble(lineaSeparada[2]) * aumentoPrecio/100);
+                Producto productoActualizado = new Producto(Integer.parseInt(lineaSeparada[0]), lineaSeparada[1], precioActualizado);
+                bw2.write(productoActualizado.toString());
             }
             br.close();
             bw2.close();

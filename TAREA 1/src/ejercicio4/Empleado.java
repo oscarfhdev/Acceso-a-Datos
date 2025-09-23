@@ -13,10 +13,6 @@ public class Empleado {
 
     @Override
     public String toString() {
-        return "Empleado{" +
-                "nombre='" + nombre + '\'' +
-                ", edad=" + edad +
-                ", profesion='" + profesion + '\'' +
-                '}';
+        return this.nombre + ";" + this.edad + ";" + this.profesion;
     }
 }

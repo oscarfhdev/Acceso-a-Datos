@@ -14,6 +14,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -28,26 +29,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.Ejemplo.executor": "Run",
-    "Application.Ejercicio1.executor": "Run",
-    "Application.Ejercicio2.executor": "Run",
-    "Application.Ejercicio3.executor": "Run",
-    "Application.Ejercicio4.executor": "Run",
-    "Application.Ejercicio5.executor": "Run",
-    "Application.FileWriterDemo.executor": "Run",
-    "Application.ReadFileExample.executor": "Run",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "kotlin-language-version-configured": "true",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.433832",
-    "settings.editor.selected.configurable": "preferences.lookFeel"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Ejemplo.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Ejercicio1.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Ejercicio2.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Ejercicio3.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Ejercicio4.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Ejercicio5.executor&quot;: &quot;Run&quot;,
+    &quot;Application.FileWriterDemo.executor&quot;: &quot;Run&quot;,
+    &quot;Application.ReadFileExample.executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.433832&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;
   }
-}]]></component>
+}</component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="d7288a23-f590-4e48-83b1-d7a0f3013070" name="Changes" comment="" />

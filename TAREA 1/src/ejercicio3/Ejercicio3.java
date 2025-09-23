@@ -11,13 +11,16 @@ public class Ejercicio3 {
 
         try {
             BufferedWriter bw = new BufferedWriter(new FileWriter("TAREA 1/src/ejercicio3/salida.txt"));
+            System.out.print("Ingresa el nombre a ingresa, end para acabar: ");
+            nombre = scanner.nextLine();
             while (!nombre.equals("end")){
+                bw.write(nombre + "\n");
                 System.out.print("Ingresa el nombre a ingresa, end para acabar: ");
                 nombre = scanner.nextLine();
-                bw.write(nombre + "\n");
             }
             bw.close();
-            System.out.println("Información guardad en el archivo");
+            System.out.println("Se ha finalizado el programa");
+            System.out.println("Información guardada en el archivo");
         } catch (Exception e) {
             e.printStackTrace();
         }
