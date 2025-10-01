@@ -1,0 +1,32 @@
+<library>
+    <book id="b1">
+        <title>Effective Java</title>
+        <authors>
+            <author>Joshua Bloch</author>
+            <author>Cervantes</author>
+        </authors>
+        <year>2018</year>
+        <price>45.90</price>
+    </book>
+
+    <book id="b2">
+        <title>Clean Code</title>
+        <authors>
+            <author>Robert C. Martin</author>
+            <author>Sheakspeare</author>
+        </authors>
+        <year>2008</year>
+        <price>38.50</price>
+    </book>
+
+    <book id="b3">
+        <title>Head First Design Patterns</title>
+        <authors>
+            <author>Eric Freeman</author>
+            <author>Fernando Paz</author>
+
+        </authors>
+        <year>2020</year>
+        <price>29.99</price>
+    </book>
+</library>
