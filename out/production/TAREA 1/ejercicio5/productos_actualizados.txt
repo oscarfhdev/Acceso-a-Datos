@@ -1,3 +1,0 @@
-1;Teclado;28.05
-2;Ratón;16.5
-3;Monitor;16.5

@@ -1,5 +1,0 @@
-1:Juan:20
-2:Alberto:31
-3:Javi:234
-4:Adrián:20
-5:Alba:20
