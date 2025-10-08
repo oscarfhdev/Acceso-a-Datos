@@ -180,8 +180,8 @@ public class GestorAlumnos {
                 return true;
             }
         }
-
         br.read();
-        return false;
+        throw new AlumnoNotFound("El alumno con nombre" + nombre + " y apellido " + apellidos + " no se encuentra en el archivo.");
+
     }
 }
