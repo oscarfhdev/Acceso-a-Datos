@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2e515cf0-99c6-4ef2-9365-9a63047d02a5" name="Changes" comment="" />
+    <list default="true" id="49876d2d-27aa-438b-94b6-e15f61421601" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,49 +14,34 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Exception" />
       </list>
     </option>
   </component>
-  <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 2
-}</component>
-  <component name="ProjectId" id="33YVR28lfNkWNRareyeeqG2qWWv" />
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 7
+}]]></component>
+  <component name="ProjectId" id="33mUU8VaTOFZkNsn44Vg9i3HNKb" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "Application.Main.executor": "Run",
+    "Application.GestorAlumnos.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/home/oscarfh06/Documentos/OSCAR/2DAM/ACCESO A DATOS/TEMA 1/SAX/EJEMPLO CLASE/src",
     "settings.editor.selected.configurable": "preferences.lookFeel"
   }
 }]]></component>
-  <component name="RecentsManager">
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/EJEMPLO CLASE/src" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/Actividad2" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="" />
-    </key>
-  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="2e515cf0-99c6-4ef2-9365-9a63047d02a5" name="Changes" comment="" />
-      <created>1759493981619</created>
+      <changelist id="49876d2d-27aa-438b-94b6-e15f61421601" name="Changes" comment="" />
+      <created>1759921753752</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1759493981619</updated>
+      <updated>1759921753752</updated>
     </task>
     <servers />
   </component>
