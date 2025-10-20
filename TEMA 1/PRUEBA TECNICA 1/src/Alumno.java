@@ -22,13 +22,15 @@ public class Alumno {
         File archivoAlumnos = new File("src/Alumnos.txt");
         if (archivoAlumnos.exists()){
             try {
+                int id = 0;
                 BufferedReader br = new BufferedReader(new FileReader(archivoAlumnos));
                 String linea;
                 while ((linea = br.readLine()) != null){
                     String[] lineaSeparada = linea.split("\\|");
-                    int id = Integer.parseInt(lineaSeparada[0]);
-                    return ++id;
+                    id = Integer.parseInt(lineaSeparada[0]);
                 }
+                return ++id;
+
             } catch (IOException e) {
                 e.printStackTrace();
             }
