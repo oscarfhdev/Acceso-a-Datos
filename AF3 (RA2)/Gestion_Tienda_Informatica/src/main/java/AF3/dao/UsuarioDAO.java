@@ -1,11 +1,11 @@
-package informatica.dao;
-
-import informatica.conexion.ConexionDB;
+package AF3.dao;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+
+import AF3.conexion.ConexionDB;
 
 /* DAO (Data Access Object) para la tabla de usuarios.
    Esta clase solo se encarga de las consultas relacionadas con usuarios.

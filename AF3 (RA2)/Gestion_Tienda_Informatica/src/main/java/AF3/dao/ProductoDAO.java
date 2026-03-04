@@ -1,7 +1,4 @@
-package informatica.dao;
-
-import informatica.conexion.ConexionDB;
-import informatica.modelo.Producto;
+package AF3.dao;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -10,6 +7,9 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
+
+import AF3.conexion.ConexionDB;
+import AF3.modelo.Producto;
 
 /* DAO (Data Access Object) para la tabla de productos.
    Aquí están todas las operaciones CRUD (Crear, Leer, Actualizar, Eliminar)

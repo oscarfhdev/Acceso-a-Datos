@@ -1,4 +1,4 @@
-package informatica.modelo;
+package AF3.modelo;
 
 /* Esta clase representa a un usuario del sistema.
    Tiene los mismos campos que la tabla "usuarios" de la base de datos:

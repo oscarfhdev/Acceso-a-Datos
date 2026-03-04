@@ -1,4 +1,4 @@
-package informatica.conexion;
+package AF3.conexion;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

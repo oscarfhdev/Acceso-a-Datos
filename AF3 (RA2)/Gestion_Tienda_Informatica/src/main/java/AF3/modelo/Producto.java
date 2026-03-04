@@ -1,4 +1,4 @@
-package informatica.modelo;
+package AF3.modelo;
 
 /* Esta clase representa un producto del inventario de la tienda.
    Cada objeto Producto se corresponde con una fila de la tabla "productos"

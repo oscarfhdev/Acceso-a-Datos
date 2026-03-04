@@ -1,12 +1,12 @@
-package informatica;
-
-import informatica.conexion.InicializadorBD;
-import informatica.dao.ProductoDAO;
-import informatica.dao.UsuarioDAO;
-import informatica.modelo.Producto;
+package AF3;
 
 import java.util.List;
 import java.util.Scanner;
+
+import AF3.conexion.InicializadorBD;
+import AF3.dao.ProductoDAO;
+import AF3.dao.UsuarioDAO;
+import AF3.modelo.Producto;
 
 // Clase principal de la aplicación de gestión de tienda de informática.
 // Aquí se arranca todo: se prepara la base de datos, se pide login
