@@ -55,14 +55,16 @@ src/main/java/informatica/
 
 Se ha optado por una estructura normalizada y funcional basada en dos tablas:
 
-**Tabla `usuarios**`
+**Tabla `usuarios`**
+
 | Campo | Tipo | Restricciones |
 | :--- | :--- | :--- |
 | id | INTEGER | PRIMARY KEY, AUTOINCREMENT |
 | username | TEXT | NOT NULL, UNIQUE |
 | password | TEXT | NOT NULL |
 
-**Tabla `productos**`
+**Tabla `productos`**
+
 | Campo | Tipo | Restricciones |
 | :--- | :--- | :--- |
 | id | INTEGER | PRIMARY KEY, AUTOINCREMENT |
