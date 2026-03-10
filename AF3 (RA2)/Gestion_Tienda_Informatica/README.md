@@ -34,6 +34,11 @@ En negocios de menor tamaño, es habitual comenzar utilizando hojas de cálculo 
 * **Gestión de dependencias**: Maven.
 * **IDE**: IntelliJ IDEA.
 
+### Justificación de Conectores
+Para comunicar la aplicación Java con SQLite se ha optado por utilizar el **conector JDBC** (Java Database Connectivity). 
+* **Ventajas:** Es el estándar oficial de Java, lo que proporciona una API uniforme. Si en el futuro la empresa migra de SQLite a MySQL, los cambios en el código serían mínimos (básicamente cambiar el driver y la URL de conexión). Además, al usar `PreparedStatement` nos protege nativamente contra ataques de Inyección SQL.
+* **Inconvenientes:** Frente a herramientas más modernas como los ORM (Hibernate/JPA), JDBC requiere escribir mucho código "verboso" o repetitivo (abrir conexiones, mapear los `ResultSet` a objetos a mano) y gestionar explícitamente el cierre de recursos.
+
 ### Estructura del proyecto (Patrón DAO)
 
 ```text
@@ -132,14 +137,57 @@ En un entorno de producción, este mecanismo es imprescindible. Al realizar una 
 
 ---
 
-## Correspondencia con los criterios de evaluación (RA2)
+## 4. Análisis del formato XML en la empresa
+
+Aunque en esta práctica se ha utilizado un gestor relacional (SQLite), el enunciado también solicita evaluar el uso del formato XML en entornos laborales:
+
+### Contextos de uso reales
+A pesar de que JSON es más popular para APIs web, XML sigue siendo el estándar en contextos empresariales donde la validación legal es estricta:
+* **Facturación Electrónica:** Formatos como *Facturae* en España exigen XML porque soporta de forma nativa la validación mediante esquemas (XSD) y permite incrustar Firmas Digitales (XMLDSig). 
+
+  **Ejemplo de un fragmento real de FacturaE que se ha analizado:**
+  ```xml
+  <InvoiceTotals>
+      <TotalGrossAmountBeforeTaxes>8550.00</TotalGrossAmountBeforeTaxes>
+      <TotalTaxOutputs>1966.50</TotalTaxOutputs>
+      <InvoiceTotal>10516.50</InvoiceTotal>
+  </InvoiceTotals>
+  <Items>
+      <InvoiceLine>
+          <ItemDescription>Vigas de acero</ItemDescription>
+          <Quantity>5.0</Quantity>
+          <UnitPriceWithoutTax>1700.00</UnitPriceWithoutTax>
+          <TotalCost>8500.00</TotalCost>
+          <TaxesOutputs>
+              <Tax>
+                  <TaxTypeCode>01</TaxTypeCode>
+                  <TaxRate>23.00</TaxRate>
+              </Tax>
+          </TaxesOutputs>
+      </InvoiceLine>
+  </Items>
+  ```
+
+* **Intercambio B2B y SOAP:** Muchos bancos y aseguradoras siguen comunicándose mediante el protocolo SOAP, el cual se basa íntegramente en XML por sus estrictos contratos de interfaz (WSDL).
+
+### Ventajas e inconvenientes frente a otros formatos
+
+* **Frente a JSON:** XML es más pesado y "verboso" (consume más ancho de banda al repetir etiquetas). Sin embargo, es mucho más potente para validar datos y soporta namespaces para evitar colisiones de nombres si se integran datos de diferentes sistemas.
+
+* **Frente a CSV:** CSV es ideal para exportar tablas planas rápidamente. No obstante, es incapaz de representar jerarquías. Como se ve en la factura anterior, el XML anida los impuestos dentro de cada línea de artículo de forma natural, algo inviable en CSV puro sin repetir múltiples columnas.
+
+* **Frente a SQL:** SQL obliga a tener una estructura rígida en tablas. XML es semiestructurado, ideal para intercambiar documentos heterogéneos, pero ineficiente frente a SQL a la hora de realizar transacciones concurrentes o búsquedas entre millones de registros.
+
+---
+
+## 5. Correspondencia con los criterios de evaluación (RA2)
 
 A continuación, se detalla cómo se ha cubierto cada punto de la rúbrica de evaluación:
 
 | Criterio | Descripción | Implementación en el proyecto |
-| --- | --- | --- |
-| **a)** | Ventajas e inconvenientes de conectores | Sección 1 de este documento (análisis frente a hojas de cálculo). |
-| **b)** | Gestor de BBDD embebido | Implementación de SQLite (archivo `.db` local independiente de servidores externos). |
+| :--- | :--- | :--- |
+| **a)** | Ventajas e inconvenientes de conectores | Sección 2 de este documento (Justificación de Conectores JDBC). |
+| **b)** | Gestor de BBDD embebido | Implementación de SQLite (archivo .db local independiente de servidores externos). |
 | **c)** | Conector idóneo | Importación y configuración del Driver JDBC `sqlite-jdbc` en `pom.xml`. |
 | **d)** | Conexión establecida | Gestionada en la clase `ConexionDB.java` mediante la API `DriverManager.getConnection()`. |
 | **e)** | Estructura de la BBDD definida | La clase `InicializadorBD.java` emplea sentencias DDL (`CREATE TABLE IF NOT EXISTS`) en el primer arranque. |
@@ -148,7 +196,5 @@ A continuación, se detalla cómo se ha cubierto cada punto de la rúbrica de ev
 | **h)** | Aplicación que efectúa consultas | Todas las operaciones SQL se ejecutan de forma segura mediante `PreparedStatement`. |
 | **i)** | Objetos eliminados tras su función | Uso estricto y sistemático de bloques `try-with-resources` en los DAOs, garantizando el cierre automático de conexiones (`Connection`, `Statement`, `ResultSet`). |
 | **j)** | Transacciones gestionadas | Implementado en el método `simularVentaTransaccional()` con gestión manual de `auto-commit`, `rollback()` y `commit()`. |
-
----
 
 *Nota adicional: Al compilar y ejecutar la aplicación por primera vez, el sistema autogenera el usuario administrador (`admin` / `1234`) e inserta 5 productos variados de demostración, permitiendo evaluar el funcionamiento del CRUD inmediatamente sin necesidad de introducir registros manuales.*
