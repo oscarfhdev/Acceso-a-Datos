@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<tienda>
+    <producto id="1">
+        <nombre>Ratón inalámbrico Logitech</nombre>
+        <descripcion>Ratón ergonómico con conexión Bluetooth y batería recargable</descripcion>
+        <precio>29.99</precio>
+        <stock>50</stock>
+    </producto>
+    <producto id="2">
+        <nombre>Teclado mecánico RGB</nombre>
+        <descripcion>Teclado mecánico con switches Cherry MX Red e iluminación RGB</descripcion>
+        <precio>89.95</precio>
+        <stock>30</stock>
+    </producto>
+    <producto id="3">
+        <nombre>Monitor 27 pulgadas 4K</nombre>
+        <descripcion>Monitor IPS de 27 pulgadas con resolución 4K y 60Hz</descripcion>
+        <precio>349.0</precio>
+        <stock>15</stock>
+    </producto>
+    <producto id="4">
+        <nombre>Auriculares con micrófono</nombre>
+        <descripcion>Auriculares gaming con cancelación de ruido y micrófono integrado</descripcion>
+        <precio>59.5</precio>
+        <stock>40</stock>
+    </producto>
+    <producto id="5">
+        <nombre>Cable HDMI 2.1</nombre>
+        <descripcion>Cable HDMI de alta velocidad compatible con 4K a 120Hz, 2 metros</descripcion>
+        <precio>12.99</precio>
+        <stock>100</stock>
+    </producto>
+</tienda>
